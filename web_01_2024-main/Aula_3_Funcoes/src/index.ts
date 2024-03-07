@@ -4,7 +4,7 @@ function adicionar(x:number, y:number) {
 }
 
 // funcao anonima
-let add = function(x:number, y:number) { return (x + y); }
+let adicionar2 = function(x:number, y:number) { return (x + y); }
 
 
 //Funções com tipos
