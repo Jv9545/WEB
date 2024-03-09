@@ -92,7 +92,12 @@ class Calculadora {
     }
 
     divisao(x:number, y:number):number{
-        let resultado = x/y;
+        let resultado:number = 0;
+        if(y == 0){
+            console.log("Não é possível dividir por zero");
+        }else{
+            resultado = x/y;
+        }
         return resultado;
     }
 
@@ -100,6 +105,44 @@ class Calculadora {
         let resultado = x * (y/100);
         return resultado;
     }
-
-    
 }
+
+console.log("EXERCÍCIO 2\n");
+let calculadora = new Calculadora(1,2);
+let soma:number;
+let subtracao:number;
+let divisao:number;
+let multiplicação:number;
+let porcentagem:number;
+
+soma = calculadora.soma(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "+",calculadora.getValor2, "=", soma);
+
+subtracao = calculadora.subtracao(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "-",calculadora.getValor2, "=", subtracao);
+
+divisao = calculadora.divisao(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "/",calculadora.getValor2, "=", divisao);
+
+multiplicação = calculadora.multiplicação(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "x",calculadora.getValor2, "=", multiplicação);
+
+porcentagem = calculadora.porcentagem(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "",calculadora.getValor2, "=", porcentagem);
+
+
+
+/* soma = calculadora.soma(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "+",calculadora.getValor2, "=", soma);
+
+subtracao = calculadora.subtracao(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "-",calculadora.getValor2, "=", subtracao);
+
+divisao = calculadora.divisao(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "/",calculadora.getValor2, "=", divisao);
+
+multiplicação = calculadora.multiplicação(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "x",calculadora.getValor2, "=", multiplicação);
+
+porcentagem = calculadora.porcentagem(calculadora.getValor1, calculadora.getValor2);
+console.log("Resultado de", calculadora.getValor1, "",calculadora.getValor2, "=", porcentagem);*/
