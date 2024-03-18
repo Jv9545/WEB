@@ -131,21 +131,44 @@ console.log("Resultado de", calculadora.getValor1, "x",calculadora.getValor2, "=
 porcentagem = calculadora.porcentagem(calculadora.getValor1, calculadora.getValor2);
 console.log(calculadora.getValor2, "% de", calculadora.getValor1, "=", porcentagem);
 
+class Produto {
+    private nome:string;
+    private preco:number;
+    private qtdEstoque:number;
 
-/*console.log("\nMetodos usado os valores definidos com set");
-console.log("Resultado de", calculadora.getValor1, "+",calculadora.getValor2, "=",
- soma = calculadora.soma(calculadora.setValor1 = 100, calculadora.setValor2 = 625));
+    constructor(nome:string, preco:number, qtdEstoque:number){
+        this.nome = nome;
+        this.preco = preco;
+        this.qtdEstoque = qtdEstoque;
+    }
 
+    set setQtd(qtd:number){
+        this.qtdEstoque = qtd;
+    }
+    get getQtdEstque() :number{
+        return this.qtdEstoque;
+    }
 
-console.log("Resultado de", calculadora.getValor1, "-",calculadora.getValor2, "=",
- subtracao = calculadora.subtracao(calculadora.setValor1 = 1983, calculadora.setValor2 = 2));
+    get getPreco():number{
+        return this.getPreco;
+    }
 
-console.log("Resultado de", calculadora.getValor1, "/",calculadora.getValor2, "=", 
-divisao = calculadora.divisao(calculadora.setValor1 = 100, calculadora.setValor2 = 0));
+    calcularValorTotalEmEstoque():number{
+        let valor : number;
+        valor = this.getPreco * this.getQtdEstque;
+        return valor;
+    }
 
-console.log("Resultado de", calculadora.getValor1, "x",calculadora.getValor2, "=",
- multiplicação = calculadora.multiplicação(calculadora.setValor1 = 534, calculadora.setValor2 = 0));
+    reporEstoque(qtd:number){
+        this.setQtd = qtd;
+    }
+    
+    vender(qtd:number){
+        if(qtd > this.getQtdEstque){
+            console.log("Quantidade Indisponivel");
+        }else{
+            this.qtdEstoque = this.getQtdEstque - qtd;
+        }
+    }
 
-
-console.log("Resultado de", calculadora.getValor1, "",calculadora.getValor2, "=",
- porcentagem = calculadora.porcentagem(calculadora.setValor1 = 1000, calculadora.setValor2 = 50));*/
+}
